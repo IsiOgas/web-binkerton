@@ -2,10 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("<h1>Hello world!</h1>")
+    return render(request, 'home.html')
 
 def mapa(request):
-    return HttpResponse('mapa')
+    return render(request, 'mapa.html')
 
 def reportes(request):
-    return HttpResponse('reportes')
+    return render(request, 'reportes.html')
