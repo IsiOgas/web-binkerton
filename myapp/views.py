@@ -9,3 +9,6 @@ def mapa(request):
 
 def reportes(request):
     return render(request, 'reportes.html')
+
+def infografia(request):
+    return render(request, 'infografia.html')
