@@ -4,12 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infografía</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #367c46;
+        }
+        .button-container {
+            position: absolute;
+            top: 20px;
+        }
+        .button-container a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #3c7fc6;
+            color: white;
+            border-radius: 5px;
+        }
+        img {
+            width: 50%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <div>
-        <h1>Esta es la página de Infografía</h1>
         <img src={% static 'imagenes/infografiaproyecto.jpeg' %}>
-        <div class="buttons">
+        <div class="button-container">
             <a href="{% url 'mapa' %}">Volver al Mapa</a>
         </div>
     </div>
