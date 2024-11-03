@@ -7,19 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa</title>
     <style>
-        body {
-            background-color: #FFFACD;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3em;
-        }
         .gallery {
             position: relative;
             width: 100%;
@@ -42,40 +29,21 @@
             margin: 5px;
             cursor: pointer;
         }
-        .buttons a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-        }
-        .buttons a:hover {
-            background-color: #45a049;
-        }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Esta es la página del Mapa</h1>
-        <div class="gallery">
-            <img src="{% static 'imagenes/imagen1.jpg' %}" alt="Imagen 1" class="active">
-            <img src="{% static 'imagenes/imagen2.jpg' %}" alt="Imagen 2">
-            <img src="{% static 'imagenes/imagen3.jpg' %}" alt="Imagen 3">
-            <img src="{% static 'imagenes/imagen4.jpg' %}" alt="Imagen 4">
-        </div>
-        <div class="buttons">
-            <button onclick="showImage(0)">1</button>
-            <button onclick="showImage(1)">2</button>
-            <button onclick="showImage(2)">3</button>
-            <button onclick="showImage(3)">4</button>
-        </div>
-        <div class="buttons">
-            <a href="{% url 'home' %}">Volver al Inicio</a>
-            <a href="{% url 'infografia' %}">Infografía</a>
-        </div>
+    <h1>Mapa</h1>
+    <div class="gallery">
+        <img src="{% static 'imagenes/imagen1.jpg' %}" alt="Imagen 1" class="active">
+        <img src="{% static 'imagenes/imagen2.jpg' %}" alt="Imagen 2">
+        <img src="{% static 'imagenes/imagen3.jpg' %}" alt="Imagen 3">
+        <img src="{% static 'imagenes/imagen4.jpg' %}" alt="Imagen 4">
+    </div>
+    <div class="buttons">
+        <button onclick="showImage(0)">1</button>
+        <button onclick="showImage(1)">2</button>
+        <button onclick="showImage(2)">3</button>
+        <button onclick="showImage(3)">4</button>
     </div>
 
     <script>
