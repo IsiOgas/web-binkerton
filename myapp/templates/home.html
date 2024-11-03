@@ -1,8 +1,11 @@
+{% load static %}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binkerton</title>
+    <title>Mapa</title>
     <style>
         body {
             background-color: #FFFACD;
@@ -17,8 +20,27 @@
         h1 {
             font-size: 3em;
         }
+        .gallery {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+        .gallery img {
+            width: 100%;
+            display: none;
+        }
+        .gallery img.active {
+            display: block;
+        }
         .buttons {
-            margin-top: 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .buttons button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
         }
         .buttons a {
             display: inline-block;
@@ -37,11 +59,32 @@
 </head>
 <body>
     <div>
-        <h1>Binkerton</h1>
+        <h1>Esta es la página del Mapa</h1>
+        <div class="gallery">
+            <img src="{% static 'imagenes/imagen1.jpg' %}" alt="Imagen 1" class="active">
+            <img src="{% static 'imagenes/imagen2.jpg' %}" alt="Imagen 2">
+            <img src="{% static 'imagenes/imagen3.jpg' %}" alt="Imagen 3">
+            <img src="{% static 'imagenes/imagen4.jpg' %}" alt="Imagen 4">
+        </div>
         <div class="buttons">
-            <a href="{% url 'mapa' %}">Mapa</a>
-            <a href="{% url 'reportes' %}">Reportes</a>
+            <button onclick="showImage(0)">1</button>
+            <button onclick="showImage(1)">2</button>
+            <button onclick="showImage(2)">3</button>
+            <button onclick="showImage(3)">4</button>
+        </div>
+        <div class="buttons">
+            <a href="{% url 'home' %}">Volver al Inicio</a>
+            <a href="{% url 'infografia' %}">Infografía</a>
         </div>
     </div>
+
+    <script>
+        function showImage(index) {
+            const images = document.querySelectorAll('.gallery img');
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+    </script>
 </body>
 </html>
