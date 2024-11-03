@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reportes</title>
+    <title>Sistema de Reportes</title>
 </head>
 <body>
-    <div>
-        <h1>Esta es la página de Reportes</h1>
-        <div class="buttons">
-            <a href="{% url 'home' %}">Volver al Inicio</a>
-        </div>
-    </div>
+    <h1>Sistema de Reportes</h1>
+    {% if mensaje %}
+        <p>{{ mensaje }}</p>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
