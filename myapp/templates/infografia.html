@@ -3,35 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     <title>Infografía</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #367c46;
-        }
-        .button-container {
-            position: absolute;
-            top: 20px;
-        }
-        .button-container a {
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: #3c7fc6;
-            color: white;
-            border-radius: 5px;
-        }
-        img {
-            width: 50%;
-            height: auto;
-        }
-    </style>
 </head>
-<body>
+<body class="infografia-miau">
     <div>
         <img src={% static 'imagenes/infografiaproyecto.jpeg' %}>
         <div class="button-container">

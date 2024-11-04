@@ -5,48 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     <title>Mapa</title>
-    <style>
-        .gallery {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin: auto;
-        }
-        .gallery img {
-            width: 100%;
-            display: none;
-        }
-        .gallery img.active {
-            display: block;
-        }
-        .buttons {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .buttons button {
-            padding: 10px;
-            margin: 5px;
-            cursor: pointer;
-        }
-        .buttons a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-        }
-        .buttons a:hover {
-            background-color: #45a049;
-        }
-    </style>
 </head>
 <body>
     <div>
-        <h1>Esta es la página del Mapa</h1>
+        <h1 class="titulo-mapa">Mapa Campus San Joaquín UTFSM</h1>
         <div class="gallery">
             <img src="{% static 'imagenes/piso1.jpg' %}" alt="Imagen 1" class="active">
             <img src="{% static 'imagenes/piso2.jpg' %}" alt="Imagen 2">
