@@ -18,4 +18,4 @@ def reportes(request):
     return render(request, 'reportes.html', {'form': form})
 
 def infografia(request):
-    return render(request, 'infografia.html')    
+    return render(request, 'infografia.html')
