@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Reportes</title>
+    <style>
+            .buttons {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        .buttons a:hover {
+            background-color: #45a049;
+        }
+    </style>    
 </head>
 <body>
     <h1>Sistema de Reportes</h1>
@@ -15,5 +33,9 @@
         {{ form.as_p }}
         <button type="submit">Enviar</button>
     </form>
+    <div>
+        <div class="buttons">
+            <a href="{% url 'mapa' %}">Volver al Mapa</a>
+    </div>
 </body>
 </html>
