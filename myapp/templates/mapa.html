@@ -84,12 +84,17 @@
             text-align: center;
         }
 
-        /* Estilos para el botón "Volver al Inicio" */
-        .back-button {
+        /* Estilos para los botones "Volver al Inicio" y "Infografía" */
+        .button-container {
             position: fixed;
             bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
+            display: flex;
+            gap: 10px; /* Espacio entre los botones */
+        }
+
+        .back-button, .infografia-button {
             background-color: #4CAF50;
             border: none;
             border-radius: 5px; /* Cambiado a cuadrado */
@@ -103,7 +108,7 @@
             text-decoration: none; /* Sin subrayado */
         }
 
-        .back-button:hover {
+        .back-button:hover, .infografia-button:hover {
             background-color: #45a049;
         }
     </style>
@@ -204,8 +209,11 @@
                 <span class="tooltip">Información de la ubicación 25</span>
             </button>
 
-            <!-- Botón "Volver al Inicio" -->
-            <a href="{% url 'home' %}" class="back-button">Volver al Inicio</a>
+            <!-- Botones "Volver al Inicio" y "Infografía" -->
+            <div class="button-container">
+                <a href="{% url 'home' %}" class="back-button">Volver al Inicio</a>
+                <a href="{% url 'infografia' %}" class="infografia-button">Infografía</a>
+            </div>
         </div>
 
         <!-- Botones de navegación para cambiar imagen -->
