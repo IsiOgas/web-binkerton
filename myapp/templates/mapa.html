@@ -6,36 +6,247 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-    <title>Mapa</title>
+    <title>Mapa Campus San Joaquín UTFSM</title>
+    <style>
+        /* Estilos de las imágenes y contenedor */
+        .map-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery img {
+            display: none;
+            width: 100%;
+        }
+
+        .gallery img.active {
+            display: block;
+        }
+
+        /* Estilos para los botones sobre la imagen */
+        .map-button {
+            position: absolute;
+            background-color: rgb(115, 6, 6);
+            border: none;
+            border-radius: 50%;
+            width: 15px;  /* Tamaño más pequeño */
+            height: 15px; /* Tamaño más pequeño */
+            cursor: pointer;
+        }
+
+        /* Tooltip */
+        .map-button:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 0.3s;
+            white-space: nowrap;
+        }
+
+        /* Estilos para los botones de navegación */
+        .image-selector {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-selector button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px; /* Tamaño más grande */
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .image-selector button:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilos para centrar el título */
+        h1 {
+            text-align: center;
+        }
+
+        /* Estilos para el botón "Volver al Inicio" */
+        .back-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px; /* Cambiado a cuadrado */
+            width: 150px; /* Ajustado a rectangular */
+            height: 50px; /* Ajustado a rectangular */
+            cursor: pointer;
+            color: white;
+            font-size: 16px; /* Mismo tamaño de letra */
+            text-align: center;
+            line-height: 50px; /* Ajustado a rectangular */
+            text-decoration: none; /* Sin subrayado */
+        }
+
+        .back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <div>
-        <h1 class="titulo-mapa">Mapa Campus San Joaquín UTFSM</h1>
-        <div class="gallery">
-            <img src="{% static 'imagenes/piso1.jpg' %}" alt="Imagen 1" class="active">
-            <img src="{% static 'imagenes/piso2.jpg' %}" alt="Imagen 2">
-            <img src="{% static 'imagenes/piso3.jpg' %}" alt="Imagen 3">
-            <img src="{% static 'imagenes/piso4.jpg' %}" alt="Imagen 4">
+        <h1>Mapa Campus San Joaquín UTFSM</h1>
+        
+        <div class="map-container">
+            <!-- Contenedor de imágenes del mapa -->
+            <div class="gallery">
+                <img src="{% static 'imagenes/piso1.jpg' %}" alt="Imagen 1" class="active">
+                <img src="{% static 'imagenes/piso2.jpg' %}" alt="Imagen 2">
+                <img src="{% static 'imagenes/piso3.jpg' %}" alt="Imagen 3">
+                <img src="{% static 'imagenes/piso4.jpg' %}" alt="Imagen 4">
+            </div>
+
+            <!-- Botones con tooltips para Imagen 1 -->
+            <button class="map-button" style="top: 500px; left: 310px;" data-image="0">
+                <span class="tooltip">Información de la ubicación 1</span>
+            </button>
+            <button class="map-button" style="top: 500px; left: 360px;" data-image="0">
+                <span class="tooltip">Información de la ubicación 2</span>
+            </button>
+            <button class="map-button" style="top: 500px; left: 390px;" data-image="0">
+                <span class="tooltip">Información de la ubicación 3</span>
+            </button>
+            <button class="map-button" style="top: 460px; left: 520px;" data-image="0">
+                <span class="tooltip">Información de la ubicación 4</span>
+            </button>
+            <button class="map-button" style="top: 345px; left: 475px;" data-image="0">
+                <span class="tooltip">Información de la ubicación 5</span>
+            </button>
+            <button class="map-button" style="top: 355px; left: 519px;" data-image="0">
+                <span class="tooltip">Información de la ubicación 6</span>
+            </button>
+            <button class="map-button" style="top: 190px; left: 385px;" data-image="0">
+                <span class="tooltip">Información de la ubicación 7</span>
+            </button>
+            <button class="map-button" style="top: 127px; left: 490px;" data-image="0">
+                <span class="tooltip">Información de la ubicación 8</span>
+            </button>
+            <button class="map-button" style="top: 55px; left: 509px;" data-image="0">
+                <span class="tooltip">Información de la ubicación 9</span>
+            </button>
+
+            <!-- Botones con tooltips para Imagen 2 -->
+            <button class="map-button" style="top: 484px; left: 340px;" data-image="1">
+                <span class="tooltip">Información de la ubicación 10</span>
+            </button>
+            <button class="map-button" style="top: 480px; left: 280px;" data-image="1">
+                <span class="tooltip">Información de la ubicación 11</span>
+            </button>
+            <button class="map-button" style="top: 500px; left: 315px;" data-image="1">
+                <span class="tooltip">Información de la ubicación 12</span>
+            </button>
+            <button class="map-button" style="top: 500px; left: 364px;" data-image="1">
+                <span class="tooltip">Información de la ubicación 13</span>
+            </button>
+            <button class="map-button" style="top: 500px; left: 400px;" data-image="1">
+                <span class="tooltip">Información de la ubicación 14</span>
+            </button>
+            <button class="map-button" style="top: 220px; left: 354px;" data-image="1">
+                <span class="tooltip">Información de la ubicación 15</span>
+            </button>
+
+            <!-- Botones con tooltips para Imagen 3 -->
+            <button class="map-button" style="top: 484px; left: 350px;" data-image="2">
+                <span class="tooltip">Información de la ubicación 16</span>
+            </button>
+            <button class="map-button" style="top: 472px; left: 275px;" data-image="2">
+                <span class="tooltip">Información de la ubicación 17</span>
+            </button>
+            <button class="map-button" style="top: 500px; left: 315px;" data-image="2">
+                <span class="tooltip">Información de la ubicación 18</span>
+            </button>
+            <button class="map-button" style="top: 498px; left: 390px;" data-image="2">
+                <span class="tooltip">Información de la ubicación 19</span>
+            </button>
+
+            <!-- Botones con tooltips para Imagen 4 -->
+            <button class="map-button" style="top: 484px; left: 350px;" data-image="3">
+                <span class="tooltip">Información de la ubicación 20</span>
+            </button>
+            <button class="map-button" style="top: 472px; left: 275px;" data-image="3">
+                <span class="tooltip">Información de la ubicación 21</span>
+            </button>
+            <button class="map-button" style="top: 500px; left: 315px;" data-image="3">
+                <span class="tooltip">Información de la ubicación 22</span>
+            </button>
+            <button class="map-button" style="top: 498px; left: 390px;" data-image="3">
+                <span class="tooltip">Información de la ubicación 23</span>
+            </button>
+            <button class="map-button" style="top: 230px; left: 442px;" data-image="3">
+                <span class="tooltip">Información de la ubicación 24</span>
+            </button>
+            <button class="map-button" style="top: 258px; left: 495px;" data-image="3">
+                <span class="tooltip">Información de la ubicación 25</span>
+            </button>
+
+            <!-- Botón "Volver al Inicio" -->
+            <a href="{% url 'home' %}" class="back-button">Volver al Inicio</a>
         </div>
-        <div class="buttons">
-            <button onclick="showImage(0)">1</button>
-            <button onclick="showImage(1)">2</button>
-            <button onclick="showImage(2)">3</button>
-            <button onclick="showImage(3)">4</button>
-        </div>
-        <div class="buttons">
-            <a href="{% url 'home' %}">Volver al Inicio</a>
-            <a href="{% url 'infografia' %}">Infografía</a>
+
+        <!-- Botones de navegación para cambiar imagen -->
+        <div class="image-selector">
+            <button onclick="showImage(0)">Imagen 1</button>
+            <button onclick="showImage(1)">Imagen 2</button>
+            <button onclick="showImage(2)">Imagen 3</button>
+            <button onclick="showImage(3)">Imagen 4</button>
         </div>
     </div>
 
     <script>
         function showImage(index) {
+            // Cambiar la visibilidad de las imágenes
             const images = document.querySelectorAll('.gallery img');
             images.forEach((img, i) => {
                 img.classList.toggle('active', i === index);
             });
+
+            // Ocultar todos los botones y mostrar solo los que correspondan a la imagen actual
+            const buttons = document.querySelectorAll('.map-button');
+            buttons.forEach(button => {
+                button.style.display = button.getAttribute('data-image') == index ? 'block' : 'none';
+            });
         }
+
+        document.querySelectorAll('.map-button').forEach(button => {
+            button.addEventListener('mouseover', function() {
+                const tooltip = this.querySelector('.tooltip');
+                tooltip.style.visibility = 'visible';
+                tooltip.style.opacity = '1';
+            });
+            button.addEventListener('mouseout', function() {
+                const tooltip = this.querySelector('.tooltip');
+                tooltip.style.visibility = 'hidden';
+                tooltip.style.opacity = '0';
+            });
+        });
+
+        // Inicializar la visibilidad de los botones
+        showImage(0);
     </script>
 </body>
 </html>
