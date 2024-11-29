@@ -33,14 +33,15 @@
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #EED8A9;
+    color: #10130C;
     text-decoration: none;
     font-size: 1.2em;
     border-radius: 5px;
 }
 .buttons a:hover {
-    background-color: #45a049;
+    background-color: #10130C;
+    color: #EED8A9;
 }
 
 /* ajustes de la pagina de la infografia */
@@ -51,7 +52,7 @@
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #367c46;
+    background-color: #10130C;
 }
 .infografia-miau .button-container {
     position: fixed;
@@ -62,8 +63,8 @@
 .infografia-miau .button-container a {
     text-decoration: none;
     padding: 10px 20px;
-    background-color: #3c7fc6;
-    color: white;
+    background-color: #EED8A9;
+    color: #10130C;
     border-radius: 5px;
 }
 
