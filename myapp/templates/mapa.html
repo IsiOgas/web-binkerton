@@ -7,113 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     <title>Mapa Campus San Joaquín UTFSM</title>
-    <style>
-        /* Estilos de las imágenes y contenedor */
-        .map-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .gallery img {
-            display: none;
-            width: 100%;
-        }
-
-        .gallery img.active {
-            display: block;
-        }
-
-        /* Estilos para los botones sobre la imagen */
-        .map-button {
-            position: absolute;
-            background-color: rgb(239, 8, 235);
-            border: none;
-            border-radius: 50%;
-            width: 15px;  /* Tamaño más pequeño */
-            height: 15px; /* Tamaño más pequeño */
-            cursor: pointer;
-        }
-
-        /* Tooltip */
-        .map-button:hover .tooltip {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .tooltip {
-            visibility: hidden;
-            opacity: 0;
-            background-color: black;
-            color: #fff;
-            text-align: center;
-            padding: 5px;
-            border-radius: 5px;
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: opacity 0.3s;
-            white-space: nowrap;
-        }
-
-        /* Estilos para los botones de navegación */
-        .image-selector {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .image-selector button {
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px; 
-            cursor: pointer;
-            background-color: #EED8A9;
-            color: #10130C;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .image-selector button:hover {
-            background-color: #10130C;
-            color: #EED8A9;
-        }
-
-        /* Estilos para centrar el título */
-        h1 {
-            text-align: center;
-        }
-
-        /* Estilos para los botones "Volver al Inicio" y "Infografía" */
-        .button-container {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px; /* Espacio entre los botones */
-        }
-
-        .back-button, .infografia-button {
-            background-color: #EED8A9;
-            border: none;
-            border-radius: 5px; /* Cambiado a cuadrado */
-            width: 150px; /* Ajustado a rectangular */
-            height: 50px; /* Ajustado a rectangular */
-            cursor: pointer;
-            color: #10130C;
-            font-size: 16px; /* Mismo tamaño de letra */
-            text-align: center;
-            line-height: 50px; /* Ajustado a rectangular */
-            text-decoration: none; /* Sin subrayado */
-        }
-
-        .back-button:hover, .infografia-button:hover {
-            background-color: #10130C;
-            color: #EED8A9;
-        }
-    </style>
 </head>
 <body>
     <div>
@@ -130,31 +23,31 @@
 
             <!-- Botones con tooltips para Imagen 1 -->
             <button class="map-button" style="top: 500px; left: 310px;" data-image="0">
-                <span class="tooltip">k</span>
+                <span class="tooltip">K</span>
             </button>
             <button class="map-button" style="top: 500px; left: 360px;" data-image="0">
-                <span class="tooltip">k2</span>
+                <span class="tooltip">K2</span>
             </button>
             <button class="map-button" style="top: 500px; left: 390px;" data-image="0">
-                <span class="tooltip">k3</span>
+                <span class="tooltip">K3</span>
             </button>
             <button class="map-button" style="top: 460px; left: 520px;" data-image="0">
-                <span class="tooltip">entrada</span>
+                <span class="tooltip">Entrada</span>
             </button>
             <button class="map-button" style="top: 345px; left: 475px;" data-image="0">
-                <span class="tooltip">pasillo exterior a </span>
+                <span class="tooltip">Pasillo exterior A </span>
             </button>
             <button class="map-button" style="top: 355px; left: 519px;" data-image="0">
-                <span class="tooltip">pasillo interior a </span>
+                <span class="tooltip">Pasillo interior A </span>
             </button>
             <button class="map-button" style="top: 190px; left: 385px;" data-image="0">
-                <span class="tooltip">afuera del casino</span>
+                <span class="tooltip">Casino Exterior</span>
             </button>
             <button class="map-button" style="top: 127px; left: 490px;" data-image="0">
-                <span class="tooltip">patio cerrito</span>
+                <span class="tooltip">Patio Cerrito</span>
             </button>
             <button class="map-button" style="top:63.1px; left: 509px;" data-image="0">
-                <span class="tooltip">noac</span>
+                <span class="tooltip">Noac</span>
             </button>
 
             <!-- Botones con tooltips para Imagen 2 -->

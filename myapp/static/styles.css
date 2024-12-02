@@ -1,50 +1,102 @@
 
 /* ajustes de la pagina del mapa */
-.titulo-mapa {
-    font-size: 2.5em;                     
-    text-align: center;        
-    margin-bottom: 20px;       
-    font-family: Arial;  
-    letter-spacing:  2px;       
-}
+
 .gallery {
     position: relative;
     width: 100%;
     max-width: 600px;
     margin: auto;
 }
-.gallery img {
+.map-container {
+    position: relative;
     width: 100%;
-    display: none;
+    max-width: 800px;
+    margin: 0 auto;
 }
+.gallery img {
+    display: none;
+    width: 100%;
+}
+
 .gallery img.active {
     display: block;
 }
-.buttons {
-    text-align: center;
-    margin-top: 10px;
-}
-.buttons button {
-    padding: 10px;
-    margin: 5px;
+.map-button {
+    position: absolute;
+    background-color: rgb(239, 8, 235);
+    border: none;
+    border-radius: 50%;
+    width: 15px;  
+    height: 15px; 
     cursor: pointer;
 }
-.buttons a {
-    display: inline-block;
-    margin: 10px;
+.map-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+.image-selector {
+    text-align: center;
+    margin-top: 20px;
+}
+.image-selector button {
     padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px; 
+    cursor: pointer;
     background-color: #EED8A9;
     color: #10130C;
-    text-decoration: none;
-    font-size: 1.2em;
+    border: none;
     border-radius: 5px;
 }
-.buttons a:hover {
+.image-selector button:hover {
+    background-color: #10130C;
+    color: #EED8A9;
+}
+h1 {
+    text-align: center;
+}
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+}
+.back-button, .infografia-button {
+    background-color: #EED8A9;
+    border: none;
+    border-radius: 5px; /* Cambiado a cuadrado */
+    width: 150px; /* Ajustado a rectangular */
+    height: 50px; /* Ajustado a rectangular */
+    cursor: pointer;
+    color: #10130C;
+    font-size: 16px; /* Mismo tamaño de letra */
+    text-align: center;
+    line-height: 50px; /* Ajustado a rectangular */
+    text-decoration: none; /* Sin subrayado */
+}
+.back-button:hover, .infografia-button:hover {
     background-color: #10130C;
     color: #EED8A9;
 }
 
-/* ajustes de la pagina de la infografia */
+/* infografia */
 .infografia-miau {
     display: flex;
     flex-direction: column;
@@ -54,13 +106,13 @@
     margin: 0;
     background-color: #10130C;
 }
-.infografia-miau .button-container {
+.infografia-miau .button-container-miau {
     position: fixed;
     top: 20px;
     left: 20px;
 }
 
-.infografia-miau .button-container a {
+.infografia-miau .button-container-miau a {
     text-decoration: none;
     padding: 10px 20px;
     background-color: #EED8A9;
@@ -71,4 +123,66 @@
 .infografia-miau img {
     width: 50%;
     height: auto;
+}
+/* Inicio */
+.body-home {
+    background-color: #10130C;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    color: #EED8A9;
+}
+.h1-home {
+    font-size: 3em;
+}
+.buttons-home {
+    text-align: center;
+    margin-top: 20px;
+}
+.buttons-home a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #EED8A9;
+    color: #10130C;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+.buttons-home a:hover {
+    background-color: #10130C;
+    color: #EED8A9;
+}
+/* Reportes */
+.body-reportes {
+    background-color: #10130C;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    color: #EED8A9;
+}
+.buttons-reportes {
+    text-align: center;
+    margin-top: 10px;
+}
+.buttons-reportes a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #EED8A9;
+    color: #10130C;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+}
+.buttons-reportes a:hover {
+    background-color: #10130C;
+    color: #EED8A9;
 }

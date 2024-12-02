@@ -5,46 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     <title>Inicio</title>
-    <style>
-        body {
-            background-color: #10130C;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            color: #EED8A9;
-        }
-        h1 {
-            font-size: 3em;
-        }
-        .buttons {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .buttons a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #EED8A9;
-            color: #10130C;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-        }
-        .buttons a:hover {
-            background-color: #10130C;
-            color: #EED8A9;
-        }
-    </style>
 </head>
-<body>
+<body class="body-home">
     <div>
-        <h1>Binkerton</h1>
-        <div class="buttons">
+        <h1 class="h1-home">Binkerton</h1>
+        <div class="buttons-home">
             <a href="{% url 'mapa' %}">Mapa</a>
             <a href="{% url 'reportes' %}">Reportes</a>
         </div>

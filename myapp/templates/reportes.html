@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    
     <title>Sistema de Reportes</title>
     <style>
-        body {
+        .body-reportes {
             background-color: #10130C;
             font-family: Arial, sans-serif;
             display: flex;
@@ -16,11 +17,11 @@
             text-align: center;
             color: #EED8A9;
         }
-        .buttons {
+        .buttons-reportes {
             text-align: center;
             margin-top: 10px;
         }
-        .buttons a {
+        .buttons-reportes a {
             display: inline-block;
             padding: 10px 20px;
             background-color: #EED8A9;
@@ -29,13 +30,13 @@
             font-size: 1em;
             border-radius: 5px;
         }
-        .buttons a:hover {
+        .buttons-reportes a:hover {
             background-color: #10130C;
             color: #EED8A9;
         }
     </style>    
 </head>
-<body>
+<body class="body-reportes">
     <h1>Sistema de Reportes</h1>
     {% if mensaje %}
         <p>{{ mensaje }}</p>
@@ -46,7 +47,7 @@
         <button type="submit">Enviar</button>
     </form>
     <div>
-        <div class="buttons">
+        <div class="buttons-reportes">
             <a href="{% url 'home' %}">Volver al Inicio</a>
         </div>
     </div>
