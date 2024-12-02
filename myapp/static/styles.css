@@ -1,6 +1,11 @@
 
 /* ajustes de la pagina del mapa */
 
+html {
+    background-color: #10130C;
+    font-family: Arial, sans-serif;
+    color: #EED8A9;
+}
 .gallery {
     position: relative;
     width: 100%;
@@ -80,6 +85,7 @@ h1 {
 }
 .back-button, .infografia-button {
     background-color: #EED8A9;
+    font-family: Arial, sans-serif;
     border: none;
     border-radius: 5px; /* Cambiado a cuadrado */
     width: 150px; /* Ajustado a rectangular */
@@ -162,5 +168,12 @@ h1 {
 .buttons-home a:hover {
     background-color: #10130C;
     color: #EED8A9;
+}
+.sitio-logo {
+    width: 25%; 
+    height: auto; 
+    max-height: 100vh; 
+    display: block; 
+    margin: 0 auto; 
 }
 /* Reportes */
