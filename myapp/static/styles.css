@@ -105,11 +105,13 @@ h1 {
     height: 100vh;
     margin: 0;
     background-color: #10130C;
+    overflow-y: auto;
 }
 .infografia-miau .button-container-miau {
     position: fixed;
     top: 20px;
     left: 20px;
+    z-index: 10;
 }
 
 .infografia-miau .button-container-miau a {
@@ -120,10 +122,14 @@ h1 {
     border-radius: 5px;
 }
 
-.infografia-miau img {
-    width: 50%;
-    height: auto;
+.infografia-foto {
+    width: 100%; 
+    height: auto; 
+    max-height: 100vh; 
+    display: block; 
+    margin: 0 auto; 
 }
+
 /* Inicio */
 .body-home {
     background-color: #10130C;
@@ -158,31 +164,3 @@ h1 {
     color: #EED8A9;
 }
 /* Reportes */
-.body-reportes {
-    background-color: #10130C;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    text-align: center;
-    color: #EED8A9;
-}
-.buttons-reportes {
-    text-align: center;
-    margin-top: 10px;
-}
-.buttons-reportes a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #EED8A9;
-    color: #10130C;
-    text-decoration: none;
-    font-size: 1em;
-    border-radius: 5px;
-}
-.buttons-reportes a:hover {
-    background-color: #10130C;
-    color: #EED8A9;
-}

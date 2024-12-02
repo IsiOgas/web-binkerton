@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    
-    <title>Sistema de Reportes</title>
+    <title>Reportes</title>
     <style>
         .body-reportes {
             background-color: #10130C;
+            flex-direction: column;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
@@ -16,6 +16,7 @@
             margin: 0;
             text-align: center;
             color: #EED8A9;
+            padding-top: 20px;
         }
         .buttons-reportes {
             text-align: center;
@@ -34,10 +35,19 @@
             background-color: #10130C;
             color: #EED8A9;
         }
+        h1 {
+            margin-bottom: 300px;
+            margin: 10px;
+            padding: 10px;
+        }
+        
     </style>    
 </head>
+
 <body class="body-reportes">
-    <h1>Sistema de Reportes</h1>
+    <div>
+        <h1>Sistema de Reportes</h1>   
+    </div>
     {% if mensaje %}
         <p>{{ mensaje }}</p>
     {% endif %}
